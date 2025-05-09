@@ -1,0 +1,1 @@
+<template><h2 class='text-2xl font-bold mb-4'>Apuntes</h2><p class='text-gray-400'>Contenido en construcción...</p></template>
