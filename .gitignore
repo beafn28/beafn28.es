@@ -2,7 +2,8 @@
 node_modules/
 dist/
 .vite/
-
+.env
+.vercel/
 # Sistema
 .DS_Store
 Thumbs.db
