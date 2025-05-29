@@ -1,9 +1,12 @@
 <template>
-  <div class="min-h-screen bg-[#0b0e11] text-green-400 font-mono p-6">
+  <div class="min-h-screen bg-[#0b0e11] text-green-400 font-mono p-6 relative">
     <div class="max-w-3xl mx-auto">
 
+      <!-- Título -->
+      <h1 class="text-3xl font-bold mb-6 border-b border-green-700 pb-2">Contacto</h1>
+
       <!-- Terminal simulada con formulario -->
-      <div class="bg-[#0d1117] border border-green-700 shadow-green-500/20 shadow-md rounded-b-md px-6 py-6 space-y-5">
+      <div class="bg-[#0d1117] border border-green-700 shadow-green-500/20 shadow-md rounded-md px-6 py-6 space-y-5">
         <div>
           <span class="text-green-500">beafn28@web:~$</span>
           <span class="ml-2">echo "Tu nombre:"</span>
@@ -39,19 +42,27 @@
       </div>
 
       <!-- Redes como comandos -->
-      <div class="mt-12 bg-[#0d1117] border border-green-700 rounded p-6 shadow-green-500/10 shadow">
+      <div class="mt-10 bg-[#0d1117] border border-green-700 rounded p-6 shadow-green-500/10 shadow">
         <p class="mb-4 text-green-300">beafn28@web:~$ cat redes_contacto.txt</p>
         <div class="space-y-3 ml-4">
-        <div><span class="text-green-500">[Email]</span> <a href="mailto:beafn23@gmail.com" class="text-blue-400 hover:underline">beafn23@gmail.com</a></div>
-        <div><span class="text-green-500">[LinkedIn]</span> <a href="https://linkedin.com/in/beatriz-fresno-naumova" class="text-blue-400 hover:underline" target="_blank">linkedin.com/in/beatriz-fresno-naumova</a></div>
+          <div><span class="text-green-500">[Email]</span> <a href="mailto:beafn23@gmail.com" class="text-blue-400 hover:underline">beafn23@gmail.com</a></div>
+          <div><span class="text-green-500">[LinkedIn]</span> <a href="https://linkedin.com/in/beatriz-fresno-naumova" class="text-blue-400 hover:underline" target="_blank">linkedin.com/in/beatriz-fresno-naumova</a></div>
           <div><span class="text-green-500">[GitHub]</span> <a href="https://github.com/beafn28" class="text-blue-400 hover:underline" target="_blank">github.com/beafn28</a></div>
           <div><span class="text-green-500">[HackTheBox]</span> <a href="https://app.hackthebox.com/profile/121349" class="text-blue-400 hover:underline" target="_blank">app.hackthebox.com/profile/121349</a></div>
           <div><span class="text-green-500">[TryHackMe]</span> <a href="https://tryhackme.com/p/beafn28" class="text-blue-400 hover:underline" target="_blank">tryhackme.com/p/beafn28</a></div>
           <div><span class="text-green-500">[GitBook]</span> <a href="https://beafn28.gitbook.io" class="text-blue-400 hover:underline" target="_blank">beafn28.gitbook.io</a></div>
-         
         </div>
       </div>
     </div>
+
+    <!-- Botón Volver Arriba -->
+    <button
+      @click="scrollToTop"
+      class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-4 rounded-full shadow-lg transition"
+      aria-label="Volver arriba"
+    >
+      ↑
+    </button>
   </div>
 </template>
 
@@ -74,6 +85,10 @@ async function handleSubmit() {
   } catch (err) {
     alert('Error al enviar el mensaje.')
   }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
 
