@@ -122,5 +122,5 @@ function scrollToTop() {
 </script>
 
 <style scoped>
-/* Puedes añadir animaciones o estilos si lo deseas */
+
 </style>

@@ -59,8 +59,8 @@
                   </span>
                 </div>
                 <p class="text-sm text-white mb-4">
-                  CTF creado para <span class="text-green-400">The Hacker Labs</span> que pone a prueba tus habilidades con WordPress, esteganografía, cron jobs y escalada de privilegios.
-                </p>
+  CTF creado para <span class="text-green-400">The Hacker Labs</span> donde deberás enfrentarte a explotación de WordPress, técnicas de esteganografía, automatización con cron jobs y escalada de privilegios en un entorno realista.
+</p>
               </div>
               <div class="flex gap-3 flex-wrap mt-auto pt-4">
                 <a href="https://thehackerslabs.com/facultad/" target="_blank"
@@ -112,7 +112,7 @@
         </span>
       </div>
       <p class="text-sm text-white mb-4">
-        CTF creado para <span class="text-green-400">DockerLabs</span> inspirado en la serie "Pretty Little Liars", donde deberás usar técnicas de <span class="text-green-400">fuerza bruta por SSH</span>, análisis lógico, descifrado simétrico/asimétrico y enumeración web para progresar como si siguieras el rastro del misterioso usuario <code class="text-green-500">A</code>.
+        CTF creado para <span class="text-green-400">DockerLabs</span> inspirado en la serie "Pretty Little Liars", donde deberás usar técnicas de <span class="text-green-400">fuerza bruta por SSH</span>, análisis lógico, descifrado simétrico/asimétrico y enumeración web para progresar como si siguieras el rastro del misterioso usuario.
       </p>
     </div>
     <div class="flex gap-3 flex-wrap mt-auto pt-4">
@@ -195,7 +195,7 @@
     </div>
     <div class="mt-auto pt-4">
       <a href="https://github.com/beafn28/Cheatsheet-Hacking" target="_blank"
-        class="text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+        class="min-w-[150px] text-center inline-block text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
         Ver repositorio
       </a>
     </div>
@@ -218,7 +218,7 @@
     </div>
     <div class="mt-auto pt-4">
       <a href="https://github.com/beafn28/VulnSpy" target="_blank"
-        class="text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+        class="min-w-[150px] text-center inline-block text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
         Ver repositorio
       </a>
     </div>
@@ -240,7 +240,7 @@
     </div>
     <div class="mt-auto pt-4">
       <a href="https://github.com/beafn28/Computacion-Cuantica" target="_blank"
-        class="text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+        class="min-w-[150px] text-center inline-block text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
         Ver repositorio
       </a>
     </div>
@@ -262,7 +262,7 @@
     </div>
     <div class="mt-auto pt-4">
       <a href="https://github.com/beafn28/CripTool" target="_blank"
-                          class="inline-block text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+                          class="min-w-[150px] text-center inline-block text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
         Ver repositorio
       </a>
     </div>
@@ -294,17 +294,27 @@
         </div>
       </div>
     </div>
+        <button
+      @click="scrollToTop"
+      class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-4 rounded-full shadow-lg transition"
+      aria-label="Volver arriba"
+    >
+      ↑
+    </button>
   </div>
 </template>
 
 <script setup>
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 import { ref, computed } from 'vue'
 
 const activeCategory = ref('Todos')
 const categories = ['Todos', 'CTF', 'Herramienta', 'Apuntes', 'Cuántica']
 
 const projects = [
-  { title: 'StegaToolkit', link: 'https://github.com/beafn28/StegaToolkit', tags: ['Herramienta', 'OSINT'], description: '' },
+  { title: 'StegaToolkit', link: 'https://github.com/beafn28/StegaToolkit', tags: ['Herramienta'], description: '' },
   { title: 'CTF-Facultad', link: 'https://github.com/beafn28/CTF-Facultad', tags: ['CTF'], description: '' },
   { title: 'CTF-Elevator', link: 'https://github.com/beafn28/CTF-Elevator', tags: ['CTF'], description: 'CTF de escalada de privilegios y evasión en Linux.' },
   { title: 'CTF-Pequeñas-Mentirosas', link: 'https://github.com/beafn28/CTF-Pequenas-Mentirosas', tags: ['CTF'], description: 'CTF temático basado en lógica y cifrados sencillos.' },
