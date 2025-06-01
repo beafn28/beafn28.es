@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "fuse.js": "^7.1.0",
+    "marked": "^15.0.12",
     "vue": "^3.4.0",
     "vue-router": "^4.3.0"
   },
