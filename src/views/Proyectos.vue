@@ -305,13 +305,30 @@
 </template>
 
 <script setup>
+import { ref, computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
+
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-import { ref, computed } from 'vue'
+
+const route = useRoute()
 
 const activeCategory = ref('Todos')
 const categories = ['Todos', 'CTF', 'Herramienta', 'Apuntes', 'Cuántica']
+
+// Reacciona al tag en la URL (por ejemplo: /proyectos?tag=CTF)
+watch(
+  () => route.query.tag,
+  (newTag) => {
+    if (newTag && categories.includes(newTag)) {
+      activeCategory.value = newTag
+    } else {
+      activeCategory.value = 'Todos'
+    }
+  },
+  { immediate: true }
+)
 
 const projects = [
   { title: 'StegaToolkit', link: 'https://github.com/beafn28/StegaToolkit', tags: ['Herramienta'], description: '' },

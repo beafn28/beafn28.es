@@ -8,21 +8,35 @@ import Contacto from './views/Contacto.vue'
 import SobreMi from './views/SobreMi.vue'
 import Proyectos from './views/Proyectos.vue'
 
-// Importa directamente tus artículos .vue
+// Artículos individuales
 import HacktivismoItalia2025 from './articulos/HacktivismoItalia2025.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/apuntes', component: Apuntes },
-  { path: '/writeups', component: Writeups },
-  { path: '/articulos', component: Articulos },
+  { path: '/', name: 'Home', component: Home },
+  { path: '/apuntes', name: 'Apuntes', component: Apuntes },
+  { path: '/writeups', name: 'Writeups', component: Writeups },
+  { path: '/articulos', name: 'Articulos', component: Articulos },
   { path: '/articulos/hacktivismo-italia-2025', name: 'HacktivismoItalia2025', component: HacktivismoItalia2025 },
-  { path: '/contacto', component: Contacto },
-  { path: '/sobremi', component: SobreMi },
-  { path: '/proyectos', component: Proyectos },
+  { path: '/contacto', name: 'Contacto', component: Contacto },
+  { path: '/sobremi', name: 'SobreMi', component: SobreMi },
+  { path: '/proyectos', name: 'Proyectos', component: Proyectos },
 ]
 
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      }
+    } else if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
 })
+
+export default router

@@ -5,10 +5,10 @@
 
       <!-- Índice tipo terminal -->
       <div class="mb-10 text-green-300 font-mono text-sm leading-relaxed space-y-2">
-        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/blog</span>$ <a href="#sobre-mi" class="text-white hover:text-green-400">cd sobre-mi</a></div>
-        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/blog/sobre-mi</span>$ <a href="#ciberseguridad" class="text-white hover:text-green-400">cat ciberseguridad</a></div>
-        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/blog/sobre-mi</span>$ <a href="#tech-stack" class="text-white hover:text-green-400">cat tech-stack</a></div>
-        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/blog/sobre-mi</span>$ <a href="#certificaciones" class="text-white hover:text-green-400">cat certificaciones</a><span class="animate-pulse text-white"></span></div>
+        <div><span class="text-green-500">beafn28@web</span>$ <a href="#sobre-mi" class="text-white hover:text-green-400">cd sobremi</a></div>
+        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#ciberseguridad" class="text-white hover:text-green-400">cat ciberseguridad</a></div>
+        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#tech-stack" class="text-white hover:text-green-400">cat tech-stack</a></div>
+        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#certificaciones" class="text-white hover:text-green-400">cat certificaciones</a><span class="animate-pulse text-white"></span></div>
       </div>
 
       <!-- SOBRE MÍ -->

@@ -65,8 +65,9 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-
+import { ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+const route = useRoute()
 const writeups = ref([
   { title: 'Brooklyn Nine Nine', platform: 'TryHackMe', os: 'Linux', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/writeups/tryhackme/brooklyn-nine-nine' },
   { title: 'Blue', platform: 'TryHackMe', os: 'Windows', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/writeups/tryhackme/blue' },
@@ -1059,6 +1060,13 @@ const filteredWriteups = computed(() => {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+onMounted(() => {
+  const platformFromQuery = route.query.platform
+  if (platformFromQuery) {
+    selectedPlatform.value = platformFromQuery
+  }
+})
 </script>
 
 <style scoped>

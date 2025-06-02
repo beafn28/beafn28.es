@@ -348,11 +348,30 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 
 const searchQuery = ref('')
 const activeCategory = ref('Todos')
-const categories = ['Todos', 'Pentesting', 'Red', 'Footprinting', 'InfoWeb', 'Vulnerabilidades', 'Nessus', 'OpenVAS', 'Reporting', 'TransferFiles', 'Shells','Metasploit', 'Passwords','WebSecurity']
+const selectedCategory = ref('')
+const categories = [
+  'Todos',
+  'Pentesting',
+  'Red',
+  'Footprinting',
+  'InfoWeb',
+  'Vulnerabilidades',
+  'Nessus',
+  'OpenVAS',
+  'Reporting',
+  'TransferFiles',
+  'Shells',
+  'Metasploit',
+  'Passwords',
+  'WebSecurity'
+]
 
 const notes = [
   // Pentesting
@@ -1126,6 +1145,13 @@ const showWebSecuritySection = computed(() =>
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+onMounted(() => {
+  const tag = route.query.tag
+  if (tag && categories.includes(tag)) {
+    selectedCategory.value = tag
+    activeCategory.value = tag
+  }
+})
 </script>
 
 <style scoped>
