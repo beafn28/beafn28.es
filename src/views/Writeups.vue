@@ -269,7 +269,7 @@ const writeups = ref([
   title: "Psycho",
   platform: "DockerLabs",
   os: "Linux",
-  difficulty: "Media",
+  difficulty: "Fácil",
   link: "https://beafn28.gitbook.io/beafn28/writeups/dockerlabs/psycho"
 },
 {
