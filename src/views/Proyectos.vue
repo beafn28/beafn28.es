@@ -101,6 +101,34 @@
     </div>
   </div>
 </template>
+<!-- Preparar eJPTv2 -->
+<template v-else-if="project.title === 'Preparar eJPTv2'">
+  <div class="flex flex-col h-full justify-between">
+    <div>
+      <h3 class="text-xl font-bold text-green-300 mb-2">Preparar eJPTv2</h3>
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span v-for="tag in project.tags" :key="tag" class="px-2 py-0.5 bg-green-700/20 text-green-400 border border-green-400 text-xs rounded-full">
+          {{ tag }}
+        </span>
+      </div>
+      <p class="text-sm text-white mb-4">
+        Recurso de preparación para la <span class="text-green-400">eJPTv2</span> que incluye apuntes detallados sobre los temas del examen
+        y un listado de <span class="text-green-400">máquinas prácticas</span> para entrenar
+        técnicas específicas como escaneo, explotación, explotación de servicios y más.
+      </p>
+    </div>
+    <div class="flex gap-3 flex-wrap mt-auto pt-4">
+      <a href="https://beafn28.gitbook.io/beafn28/preparar-ejptv2/curso-de-mario"
+        class="text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+        Ver apuntes
+      </a>
+      <a href="https://beafn28.gitbook.io/beafn28/preparar-ejptv2/maquinas" target="_blank"
+        class="text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+        Ver máquinas
+      </a>
+    </div>
+  </div>
+</template>
 <!-- CTF-Pequeñas-Mentirosas -->
 <template v-else-if="project.title === 'CTF-Pequeñas-Mentirosas'">
   <div class="flex flex-col h-full justify-between">
@@ -246,6 +274,31 @@
     </div>
   </div>
 </template>
+<template v-else-if="project.title === 'Preparar OSCP'">
+  <div class="flex flex-col h-full justify-between">
+    <div>
+      <h3 class="text-xl font-bold text-green-300 mb-2">Preparar OSCP</h3>
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span v-for="tag in project.tags" :key="tag" class="px-2 py-0.5 bg-green-700/20 text-green-400 border border-green-400 text-xs rounded-full">
+          {{ tag }}
+        </span>
+      </div>
+      <p class="text-sm text-white mb-4">
+        Recursos clave, consejos, máquinas y estrategias para afrontar la certificación <span class="text-green-400 font-semibold">OSCP</span>. Accede a apuntes, listado de máquinas preparatorias y guías técnicas elaboradas desde la experiencia personal.
+      </p>
+    </div>
+    <div class="flex gap-3 flex-wrap mt-auto pt-4">
+      <a href="https://legend-penguin-a5d.notion.site/Recursos-OSCP-1b1faf5bfa5c8030adb2eb2c7564dc09" target="_blank"
+        class="text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+        Ver recursos
+      </a>
+      <a href="https://www.notion.so/Gu-a-de-m-quinas-OSCP-1b1faf5bfa5c80d099e5ca04247f465a" target="_blank"
+        class="text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+        Ver máquinas
+      </a>
+    </div>
+  </div>
+</template>
 <!-- CripTool -->
 <template v-else-if="project.title === 'CripTool'">
   <div class="flex flex-col h-full justify-between">
@@ -333,7 +386,18 @@ watch(
 const projects = [
   { title: 'StegaToolkit', link: 'https://github.com/beafn28/StegaToolkit', tags: ['Herramienta'], description: '' },
   { title: 'CTF-Facultad', link: 'https://github.com/beafn28/CTF-Facultad', tags: ['CTF'], description: '' },
+  {
+  title: 'Preparar OSCP',
+  tags: ['Apuntes'],
+  link: 'https://www.notion.so/Preparaci-n-para-la-OSCP-e647672e82174eb7b5621b9fcc49ce9c',
+  description: 'Recopilación estructurada para preparar la certificación OSCP: incluye apuntes, recursos y una guía práctica de máquinas organizadas por técnica.'
+},
   { title: 'CTF-Elevator', link: 'https://github.com/beafn28/CTF-Elevator', tags: ['CTF'], description: 'CTF de escalada de privilegios y evasión en Linux.' },
+    {
+  title: 'Preparar eJPTv2',
+  tags: ['Apuntes'],
+  link: 'https://beafn28.gitbook.io/beafn28/preparar-ejptv2/curso-de-mario'
+},
   { title: 'CTF-Pequeñas-Mentirosas', link: 'https://github.com/beafn28/CTF-Pequenas-Mentirosas', tags: ['CTF'], description: 'CTF temático basado en lógica y cifrados sencillos.' },
   { title: 'CTF-CryptoLabyrinth', link: 'https://github.com/beafn28/CTF-CryptoLabyrinth', tags: ['CTF'], description: 'CTF enfocado en técnicas criptográficas y desafíos lógicos.' },
   { title: 'GitBook', link: 'https://github.com/beafn28/GitBook', tags: ['Apuntes'], description: 'Repositorio de apuntes en GitBook sobre ciberseguridad y herramientas útiles.' },
