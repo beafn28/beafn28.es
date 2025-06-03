@@ -284,7 +284,7 @@
         </span>
       </div>
       <p class="text-sm text-white mb-4">
-        Recursos clave, consejos, máquinas y estrategias para afrontar la certificación <span class="text-green-400 font-semibold">OSCP</span>. Accede a apuntes, listado de máquinas preparatorias y guías técnicas elaboradas desde la experiencia personal.
+        Recursos clave, consejos, máquinas y estrategias para afrontar la certificación <span class="text-green-400">OSCP</span>. Accede a apuntes, listado de máquinas preparatorias y guías técnicas elaboradas desde la experiencia personal.
       </p>
     </div>
     <div class="flex gap-3 flex-wrap mt-auto pt-4">
