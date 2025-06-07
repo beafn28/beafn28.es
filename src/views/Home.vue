@@ -15,16 +15,17 @@
         <form @submit.prevent="runCommand" class="mt-4 flex items-center">
           <span class="text-green-500 mr-2">beafn28@web:<span class="text-blue-400">{{ currentPath }}</span>$</span>
           <input
-            v-model="command"
-            class="bg-transparent outline-none flex-1 text-green-200"
-            autocomplete="off"
-            autocapitalize="off"
-            spellcheck="false"
-            @keydown.up.prevent="navigateHistory(-1)"
-            @keydown.down.prevent="navigateHistory(1)"
-            @keydown.ctrl.l.prevent="clearScreen"
-            autofocus
-          />
+  v-model="command"
+  class="bg-transparent outline-none flex-1 text-green-200"
+  autocomplete="off"
+  autocapitalize="off"
+  spellcheck="false"
+  @keydown.up.prevent="navigateHistory(-1)"
+  @keydown.down.prevent="navigateHistory(1)"
+  @keydown.ctrl.l.prevent="clearScreen"
+  @keydown.tab.prevent="handleTab"
+  autofocus
+/>
         </form>
       </div>
     </div>
@@ -327,10 +328,52 @@ function navigateHistory(dir) {
 function clearScreen() {
   output.value = []
 }
+function handleTab(event) {
+  event.preventDefault();
+  const inputVal = command.value.trim();
+  const [cmd, ...args] = inputVal.split(' ');
+  const partial = args.join(' ').toLowerCase();
+
+  const suggestMatch = (options) => {
+    const matches = options.filter(opt =>
+      opt.toLowerCase().startsWith(partial)
+    );
+
+    if (matches.length === 1) {
+      command.value = `${cmd} ${matches[0]}`;
+    } else if (matches.length > 1) {
+      output.value.push({
+        type: 'sys',
+        text: `Opciones: ${matches.join('   ')}`
+      });
+    }
+  };
+
+  if (cmd === 'cd') {
+    if (currentPath.value === '/') suggestMatch(rootDirs);
+    else if (currentPath.value === '/apuntes') suggestMatch(categories);
+    else if (currentPath.value === '/proyectos') suggestMatch(proyectosCategorias);
+  }
+
+  else if (cmd === 'cat') {
+    if (currentPath.value === '/apuntes') suggestMatch(categories);
+    else if (currentPath.value === '/writeups') suggestMatch(writeupsPlatforms);
+    else if (currentPath.value === '/proyectos') suggestMatch(proyectosCategorias);
+    else if (currentPath.value === '/sobremi') suggestMatch(['ciberseguridad', 'tech-stack', 'certificaciones']);
+    else if (currentPath.value === '/contacto') suggestMatch(['redes_contacto.txt', 'formulario_contacto.txt']);
+    else if (currentPath.value === '/articulos') suggestMatch(articles.map(a => a.slug));
+  }
+
+  else {
+    const allCommands = ['cd', 'ls', 'cat', 'help', 'limpiar', ...Object.keys(commands)];
+    suggestMatch(allCommands);
+  }
+}
 </script>
 
 <style scoped>
 input {
   caret-color: #33ff99;
 }
+
 </style>
