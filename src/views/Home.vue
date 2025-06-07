@@ -35,7 +35,7 @@
 <script setup>
 import { ref, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
-
+const rootDirs = ['apuntes', 'writeups', 'articulos', 'proyectos', 'sobremi', 'contacto']
 const router = useRouter()
 const command = ref('')
 const output = ref([
@@ -329,44 +329,67 @@ function clearScreen() {
   output.value = []
 }
 function handleTab(event) {
-  event.preventDefault();
-  const inputVal = command.value.trim();
-  const [cmd, ...args] = inputVal.split(' ');
-  const partial = args.join(' ').toLowerCase();
+  event.preventDefault()
+  const inputVal = command.value.trim()
+  const [cmd, ...args] = inputVal.split(' ')
+  const partial = args.join(' ').toLowerCase()
+
+  // Rutas y archivos disponibles según el contexto
+  const contextMap = {
+    '/': {
+      cd: rootDirs,
+    },
+    '/apuntes': {
+      cd: categories,
+      cat: categories,
+    },
+    '/writeups': {
+      cat: writeupsPlatforms,
+    },
+    '/proyectos': {
+      cd: proyectosCategorias,
+      cat: proyectosCategorias,
+    },
+    '/sobremi': {
+      cat: ['ciberseguridad', 'tech-stack', 'certificaciones'],
+    },
+    '/contacto': {
+      cat: ['redes_contacto.txt', 'formulario_contacto.txt'],
+    },
+    '/articulos': {
+      cat: articles.map(a => a.slug),
+    }
+  }
+
+  const globalCommands = ['cd', 'ls', 'cat', 'help', 'limpiar', ...Object.keys(commands)]
 
   const suggestMatch = (options) => {
     const matches = options.filter(opt =>
       opt.toLowerCase().startsWith(partial)
-    );
+    )
 
     if (matches.length === 1) {
-      command.value = `${cmd} ${matches[0]}`;
+      command.value = `${cmd} ${matches[0]}`
     } else if (matches.length > 1) {
       output.value.push({
         type: 'sys',
         text: `Opciones: ${matches.join('   ')}`
-      });
+      })
     }
-  };
+  }
 
+  // Permitir autocompletar rutas desde cualquier sitio si cmd === 'cd'
   if (cmd === 'cd') {
-    if (currentPath.value === '/') suggestMatch(rootDirs);
-    else if (currentPath.value === '/apuntes') suggestMatch(categories);
-    else if (currentPath.value === '/proyectos') suggestMatch(proyectosCategorias);
+    suggestMatch(rootDirs)
+    return
   }
 
-  else if (cmd === 'cat') {
-    if (currentPath.value === '/apuntes') suggestMatch(categories);
-    else if (currentPath.value === '/writeups') suggestMatch(writeupsPlatforms);
-    else if (currentPath.value === '/proyectos') suggestMatch(proyectosCategorias);
-    else if (currentPath.value === '/sobremi') suggestMatch(['ciberseguridad', 'tech-stack', 'certificaciones']);
-    else if (currentPath.value === '/contacto') suggestMatch(['redes_contacto.txt', 'formulario_contacto.txt']);
-    else if (currentPath.value === '/articulos') suggestMatch(articles.map(a => a.slug));
-  }
-
-  else {
-    const allCommands = ['cd', 'ls', 'cat', 'help', 'limpiar', ...Object.keys(commands)];
-    suggestMatch(allCommands);
+  // Buscar dentro del contexto actual
+  const currentContext = contextMap[currentPath.value] || {}
+  if (['cd', 'cat'].includes(cmd) && currentContext[cmd]) {
+    suggestMatch(currentContext[cmd])
+  } else {
+    suggestMatch(globalCommands)
   }
 }
 </script>
