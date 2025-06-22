@@ -71,7 +71,7 @@ const route = useRoute()
 const writeups = ref([
   { title: 'Brooklyn Nine Nine', platform: 'TryHackMe', os: 'Linux', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/writeups/tryhackme/brooklyn-nine-nine' },
   { title: 'Pickle Rick', platform: 'TryHackMe', os: 'Linux', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/writeups/tryhackme/pickle-rick' },
-  { title: 'Laboratorios PortSwigger', platform: 'PortSwigger', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/web-security/laboratorios-portswigger' },
+  { title: 'Laboratorios PortSwigger', platform: 'PortSwigger', os: 'Windows', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/web-security/laboratorios-portswigger' },
   { title: 'Billing', platform: 'TryHackMe', os: 'Linux', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/writeups/tryhackme/billing' },
   { title: 'Blue', platform: 'TryHackMe', os: 'Windows', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/writeups/tryhackme/blue' },
     {
