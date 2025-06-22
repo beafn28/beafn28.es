@@ -84,7 +84,7 @@ const articles = [
   { slug: 'hacktivismo-italia-2025', title: 'La nueva ofensiva hacktivista de 2025: ataque de NoName057(16) a infraestructuras italianas' }
 ]
 const writeupsPlatforms = [
-  "TryHackMe", "DockerLabs", "HackTheBox", "Vulnhub",
+  "TryHackMe", "DockerLabs", "HackTheBox", "PortSwigger" "Vulnhub",
   "The Hacker Labs", "Vulnyx", "Proving Ground Play", "OverTheWire"
 ]
 const categories = [
@@ -125,6 +125,7 @@ const commands = {
         "Plataformas disponibles:",
         "- HackTheBox",
         "- TryHackMe",
+        "- PortSwigger",
         "- Vulnhub",
         "- DockerLabs",
         "- TheHackerLabs",
