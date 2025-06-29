@@ -90,7 +90,7 @@ const writeupsPlatforms = [
 const categories = [
   "Pentesting", "Red", "Footprinting", "InfoWeb", "Vulnerabilidades",
   "Nessus", "OpenVAS", "Reporting", "TransferFiles", "Shells",
-  "Metasploit", "Passwords", "WebSecurity"
+  "Metasploit", "Passwords", "WebSecurity", "Active Directory"
 ]
 const commands = {
   help: () => [
