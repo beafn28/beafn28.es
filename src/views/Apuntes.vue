@@ -336,6 +336,28 @@
     </div>
   </div>
 </div>
+<!-- Sección: Active Directory -->
+<div v-if="showActiveDirectorySection" class="mb-12">
+  <h3 class="text-2xl font-bold text-green-300 mb-4">Active Directory</h3>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div
+      v-for="note in activeDirectoryNotes"
+      :key="note.title"
+      class="bg-[#11141c] border border-green-700 rounded-lg p-5 shadow hover:shadow-lg transition"
+    >
+      <h4 class="text-lg font-bold text-green-300 mb-2">{{ note.title }}</h4>
+      <p class="text-sm text-white mb-3">{{ note.description }}</p>
+      <a
+        :href="note.link"
+        target="_blank"
+        class="inline-block text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded font-bold transition"
+      >
+        Ver apuntes
+      </a>
+    </div>
+  </div>
+</div>
+
 <button
   @click="scrollToTop"
   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-4 rounded-full shadow-lg transition"
@@ -370,7 +392,8 @@ const categories = [
   'Shells',
   'Metasploit',
   'Passwords',
-  'WebSecurity'
+  'WebSecurity',
+  'Active Directory'
 ]
 
 const notes = [
@@ -1021,6 +1044,12 @@ const notes = [
   category: 'WebSecurity',
   link: 'https://beafn28.gitbook.io/beafn28/web-security/control-de-acceso',
   description: 'Bypass de restricciones de acceso para acceder a recursos no autorizados.'
+},
+{
+  title: 'Introducción a Active Directory',
+  category: 'Active Directory',
+  link: 'https://beafn28.gitbook.io/beafn28/apuntes-hacking/introduction-active-directory',
+  description: 'Conceptos básicos, arquitectura y componentes esenciales para entender Active Directory en un entorno de red.'
 }
 ]
 
@@ -1039,7 +1068,14 @@ const pentestingNotes = computed(() =>
     ['Enumeración Web', 'Exploits Públicos', 'Tipos de Shells', 'Escalada de Privilegios', 'Transferencia de Archivos'].includes(n.title)
   )
 )
+const activeDirectoryNotes = computed(() =>
+  filteredNotes.value.filter(n => n.category === 'Active Directory')
+)
 
+const showActiveDirectorySection = computed(() =>
+  (activeCategory.value === 'Todos' || activeCategory.value === 'Active Directory') &&
+  activeDirectoryNotes.value.length > 0
+)
 const nmapNotes = computed(() =>
   filteredNotes.value.filter(n => n.category === 'Red')
 )

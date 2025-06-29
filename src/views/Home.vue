@@ -178,7 +178,7 @@ function runCommand() {
   const apuntesCategorias = [
     "Pentesting", "Red", "Footprinting", "InfoWeb", "Vulnerabilidades",
     "Nessus", "OpenVAS", "Reporting", "TransferFiles", "Shells",
-    "Metasploit", "Passwords", "WebSecurity"
+    "Metasploit", "Passwords", "WebSecurity","Active Directory"
   ]
 
   // === CD ===
