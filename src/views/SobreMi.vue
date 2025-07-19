@@ -191,7 +191,7 @@ const certifications = [
     date: 'Objetivo'
   },
   {
-    title: 'eCCPT — Certified Professional Penetration Tester',
+    title: 'eCPPT — Certified Professional Penetration Tester',
     issuer: 'INE Security',
     date: 'En curso'
   },
