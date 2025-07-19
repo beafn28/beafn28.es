@@ -106,22 +106,7 @@
         <p class="text-sm text-green-400 font-bold tracking-wide">{{ cert.date }}</p>
         <p class="text-white font-semibold text-base">{{ cert.title }}</p>
         <p class="text-sm italic text-gray-400 mb-2">{{ cert.issuer }}</p>
-        <span
-          class="inline-block text-xs px-2 py-0.5 rounded-full border font-mono tracking-wide"
-          :class="cert.status === 'done'
-            ? 'text-green-300 border-green-600'
-            : cert.status === 'in-progress'
-            ? 'text-yellow-300 border-yellow-600'
-            : 'text-blue-300 border-blue-600'"
-        >
-          {{
-            cert.status === 'done'
-              ? 'Completada'
-              : cert.status === 'in-progress'
-              ? 'En progreso'
-              : 'Próximo objetivo'
-          }}
-        </span>
+        
       </div>
     </div>
   </div>
@@ -193,38 +178,32 @@ const certifications = [
   {
     title: 'CPTS — Certified Penetration Testing Specialist',
     issuer: 'Hack The Box',
-    date: 'Objetivo',
-    status: 'planned'
+    date: 'Objetivo'
   },
   {
     title: 'CBBH — Certified Bug Bounty Hunter',
     issuer: 'Hack The Box',
-    date: 'Objetivo',
-    status: 'planned'
+    date: 'Objetivo'
   },
   {
     title: 'CRTA — Certified Red Team Analyst',
     issuer: 'CyberWarFare Labs',
-    date: 'Objetivo',
-    status: 'planned'
+    date: 'Objetivo'
   },
   {
     title: 'eCCPT — Certified Professional Penetration Tester',
     issuer: 'INE Security',
-    date: 'En curso',
-    status: 'in-progress'
+    date: 'En curso'
   },
   {
     title: 'eWPTX — Web Application Penetration Tester eXtreme',
     issuer: 'INE Security',
-    date: 'En curso',
-    status: 'in-progress'
+    date: 'Jul 2025'
   },
   {
     title: 'eJPT — Junior Penetration Tester',
     issuer: 'INE Security',
-    date: 'Feb 2025',
-    status: 'done'
+    date: 'Feb 2025'
   }
 ]
 
