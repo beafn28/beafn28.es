@@ -4,12 +4,14 @@
       <h1 class="text-3xl font-bold mb-6 border-b border-green-700 pb-2">Sobre mí</h1>
 
       <!-- Índice tipo terminal -->
-      <div class="mb-10 text-green-300 font-mono text-sm leading-relaxed space-y-2">
-        <div><span class="text-green-500">beafn28@web</span>$ <a href="#sobre-mi" class="text-white hover:text-green-400">cd sobremi</a></div>
-        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#ciberseguridad" class="text-white hover:text-green-400">cat ciberseguridad</a></div>
-        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#tech-stack" class="text-white hover:text-green-400">cat tech-stack</a></div>
-        <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#certificaciones" class="text-white hover:text-green-400">cat certificaciones</a><span class="animate-pulse text-white"></span></div>
-      </div>
+      <!-- Índice tipo terminal -->
+<div class="mb-10 text-green-300 font-mono text-sm leading-relaxed space-y-2">
+  <div><span class="text-green-500">beafn28@web</span>$ <a href="#sobre-mi" class="text-white hover:text-green-400">cd sobremi</a></div>
+  <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#ciberseguridad" class="text-white hover:text-green-400">cat ciberseguridad</a></div>
+  <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#tech-stack" class="text-white hover:text-green-400">cat tech-stack</a></div>
+  <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#certificaciones" class="text-white hover:text-green-400">cat certificaciones</a></div>
+  <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#cursos" class="text-white hover:text-green-400">cat cursos</a></div>
+</div>
 
       <!-- SOBRE MÍ -->
       <div id="sobre-mi">
@@ -17,8 +19,8 @@
           Soy <strong class="text-white">Beatriz Fresno Naumova</strong>, estudiante del último curso de Ingeniería Informática en la Universidad de Salamanca (USAL). Me interesa especialmente la <span class="text-white">ciberseguridad</span>, área en la que me estoy especializando como <span class="text-white">pentester</span>. En esta web comparto <span class="text-white">proyectos personales</span>, <span class="text-white">herramientas</span>, <span class="text-white">writeups</span>, <span class="text-white">apuntes</span> y <span class="text-white">artículos</span>. También me apasiona la <span class="text-white">computación cuántica</span>, campo que considero clave para el futuro de la seguridad.
         </p>
         <p class="mb-6 text-lg leading-relaxed">
-          Mi próximo objetivo profesional es la obtención de la certificación <strong class="text-white">OSCP (Offensive Security Certified Professional)</strong>, un reto que refleja mi compromiso con la ciberseguridad ofensiva y la mejora continua.
-        </p>
+  Actualmente me encuentro en un proceso continuo de formación, ampliando mis conocimientos y habilidades mediante la obtención de certificaciones cada vez más avanzadas en ciberseguridad. Puedes consultar el progreso y el roadmap completo en el apartado <strong class="text-white">Certificaciones</strong>.
+</p>
       </div>
 
       <!-- CIBERSEGURIDAD -->
@@ -59,44 +61,83 @@
         </div>
       </div>
 
-      <!-- CERTIFICACIONES -->
-      <div id="certificaciones">
-        <h2 class="text-2xl font-semibold text-green-300 mb-4 mt-12">Certificaciones</h2>
-        <ul class="list-disc pl-6 text-white space-y-2 text-base">
-          <li><strong class="text-green-400">Junior Penetration Tester (eJPT)</strong> — INE Security</li>
-          <li><strong class="text-green-400">API Penetration Testing</strong> — APISec University</li>
-          <li><strong class="text-green-400">Cyber Threat Intelligence 101</strong> — arcX Foundation Level</li>
-          <li><strong class="text-green-400">ISC2 Candidate + ISC2 CC</strong> — Certified in Cybersecurity (ISC2)</li>
-          <li><strong class="text-green-400">Practical Introduction to Quantum-Safe Cryptography</strong> — IBM Quantum</li>
-          <li><strong class="text-green-400">Junior Cybersecurity Analyst Career Path</strong> — Cisco Networking Academy</li>
-          <li><strong class="text-green-400">Ethical Hacker</strong> — Cisco Networking Academy</li>
-          <li><strong class="text-green-400">Endpoint Security</strong> — Cisco Networking Academy</li>
-          <li><strong class="text-green-400">Network Defense</strong> — Cisco Networking Academy</li>
-          <li><strong class="text-green-400">Networking Basics</strong> — Cisco Networking Academy</li>
-          <li><strong class="text-green-400">Networking Devices and Initial Configuration</strong> — Cisco Networking Academy</li>
-          <li><strong class="text-green-400">Introduction to Cybersecurity</strong> — Cisco Networking Academy</li>
-          <li><strong class="text-green-400">English for IT</strong> — Nivel 1 y 2 (Cisco)</li>
-          <li><strong class="text-green-400">Esquema Nacional de Seguridad</strong> — Centro Criptológico Nacional</li>
-          <li><strong class="text-green-400">Aplicaciones y Desafíos en Ciberseguridad</strong> — USAL / BISITE</li>
-          <li><strong class="text-green-400">Concienciación sobre el Uso Seguro de Internet</strong> — USAL + INCIBE</li>
-          <li><strong class="text-green-400">Ciberinteligencia y Seguridad</strong> — Universidad de Salamanca</li>
-          <li><strong class="text-green-400">Programación en Python</strong> — Universidad de Salamanca</li>
-        </ul>
+
+<!-- CERTIFICACIONES -->
+<div id="certificaciones">
+  <h2 class="text-2xl font-semibold text-green-300 mb-4 mt-12">Certificaciones</h2>
+
+  <div class="relative border-l border-green-700 pl-6 ml-2 space-y-10 mt-6">
+    <div
+      v-for="cert in certifications"
+      :key="cert.title"
+      class="relative"
+    >
+
+      <!-- Contenido -->
+      <div>
+        <p class="text-sm text-green-400 font-bold tracking-wide">{{ cert.date }}</p>
+        <p class="text-white font-semibold text-base">{{ cert.title }}</p>
+        <p class="text-sm italic text-gray-400 mb-2">{{ cert.issuer }}</p>
+        <span
+          class="inline-block text-xs px-2 py-0.5 rounded-full border font-mono tracking-wide"
+          :class="cert.status === 'done'
+            ? 'text-green-300 border-green-600'
+            : cert.status === 'in-progress'
+            ? 'text-yellow-300 border-yellow-600'
+            : 'text-blue-300 border-blue-600'"
+        >
+          {{
+            cert.status === 'done'
+              ? 'Completada'
+              : cert.status === 'in-progress'
+              ? 'En progreso'
+              : 'Próximo objetivo'
+          }}
+        </span>
       </div>
     </div>
-
-    <!-- Botón volver arriba -->
-    <button
-      @click="scrollToTop"
-      class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-4 rounded-full shadow-lg transition"
-      aria-label="Volver arriba"
-    >
-      ↑
-    </button>
   </div>
+</div>
+
+<!-- CURSOS - TIMELINE -->
+<!-- CURSOS -->
+<div id="cursos" class="mt-16">
+  <h2 class="text-2xl font-semibold text-green-300 mb-4">Cursos</h2>
+  <ul class="list-disc pl-6 text-white space-y-2 text-base">
+    <li><strong class="text-green-400">API Penetration Testing</strong> — APISec University</li>
+    <li><strong class="text-green-400">Cyber Threat Intelligence 101</strong> — arcX Foundation Level</li>
+    <li><strong class="text-green-400">ISC2 Candidate + ISC2 CC</strong> — Certified in Cybersecurity (ISC2)</li>
+    <li><strong class="text-green-400">Practical Introduction to Quantum-Safe Cryptography</strong> — IBM Quantum</li>
+    <li><strong class="text-green-400">Junior Cybersecurity Analyst Career Path</strong> — Cisco Networking Academy</li>
+    <li><strong class="text-green-400">Ethical Hacker</strong> — Cisco Networking Academy</li>
+    <li><strong class="text-green-400">Endpoint Security</strong> — Cisco Networking Academy</li>
+    <li><strong class="text-green-400">Network Defense</strong> — Cisco Networking Academy</li>
+    <li><strong class="text-green-400">Networking Basics</strong> — Cisco Networking Academy</li>
+    <li><strong class="text-green-400">Networking Devices and Initial Configuration</strong> — Cisco Networking Academy</li>
+    <li><strong class="text-green-400">Introduction to Cybersecurity</strong> — Cisco Networking Academy</li>
+    <li><strong class="text-green-400">English for IT — Nivel 1 y 2</strong> — Cisco Networking Academy</li>
+    <li><strong class="text-green-400">Esquema Nacional de Seguridad</strong> — Centro Criptológico Nacional</li>
+    <li><strong class="text-green-400">Aplicaciones y Desafíos en Ciberseguridad</strong> — USAL / BISITE</li>
+    <li><strong class="text-green-400">Concienciación sobre el Uso Seguro de Internet</strong> — USAL + INCIBE</li>
+    <li><strong class="text-green-400">Ciberinteligencia y Seguridad</strong> — Universidad de Salamanca</li>
+    <li><strong class="text-green-400">Programación en Python</strong> — Universidad de Salamanca</li>
+  </ul>
+</div>
+
+<!-- Botón volver arriba -->
+<button
+  @click="scrollToTop"
+  class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-4 rounded-full shadow-lg transition"
+  aria-label="Volver arriba"
+>
+  ↑
+</button>
+</div> <!-- Cierre de max-w-5xl -->
+</div> <!-- Cierre de min-h-screen -->
 </template>
 
 <script setup>
+
 const techStack = [
   { title: 'Lenguajes de Programación', items: ['Python', 'C', 'C++', 'Java', 'Go', 'JavaScript', 'PHP', 'Perl', 'Shell Script', 'PowerShell', 'Swift'] },
   { title: 'Frontend', items: ['HTML5', 'CSS3', 'Vue.js', 'React', 'Three.js'] },
@@ -119,6 +160,47 @@ const toolCategories = [
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+const certifications = [
+  {
+    title: 'CPTS — Certified Penetration Testing Specialist',
+    issuer: 'Hack The Box',
+    date: 'Objetivo',
+    status: 'planned'
+  },
+  {
+    title: 'CBBH — Certified Bug Bounty Hunter',
+    issuer: 'Hack The Box',
+    date: 'Objetivo',
+    status: 'planned'
+  },
+  {
+    title: 'CRTA — Certified Red Team Analyst',
+    issuer: 'CyberWarFare Labs',
+    date: 'Objetivo',
+    status: 'planned'
+  },
+  {
+    title: 'eCCPT — Certified Professional Penetration Tester',
+    issuer: 'INE Security',
+    date: 'En curso',
+    status: 'in-progress'
+  },
+  {
+    title: 'eWPTX — Web Application Penetration Tester eXtreme',
+    issuer: 'INE Security',
+    date: 'En curso',
+    status: 'in-progress'
+  },
+  {
+    title: 'eJPT — Junior Penetration Tester',
+    issuer: 'INE Security',
+    date: 'Feb 2025',
+    status: 'done'
+  }
+]
+
+
 </script>
 
 <style scoped>

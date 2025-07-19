@@ -148,7 +148,8 @@ const commands = {
     "Contenido disponible:",
     "- ciberseguridad",
     "- tech-stack",
-    "- certificaciones"
+    "- certificaciones",
+    "- cursos"
   ]
 }
 if (currentPath.value === '/contacto') {
@@ -207,7 +208,8 @@ function runCommand() {
       const validFiles = {
         'ciberseguridad': '#ciberseguridad',
         'tech-stack': '#tech-stack',
-        'certificaciones': '#certificaciones'
+        'certificaciones': '#certificaciones',
+        'cursos': '#cursos'
       }
       if (validFiles[file]) {
         router.push({ path: '/sobremi', hash: validFiles[file] })
@@ -352,7 +354,7 @@ function handleTab(event) {
       cat: proyectosCategorias,
     },
     '/sobremi': {
-      cat: ['ciberseguridad', 'tech-stack', 'certificaciones'],
+      cat: ['ciberseguridad', 'tech-stack', 'certificaciones', 'cursos'],
     },
     '/contacto': {
       cat: ['redes_contacto.txt', 'formulario_contacto.txt'],
