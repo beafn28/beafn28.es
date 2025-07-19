@@ -4,11 +4,11 @@
       <h1 class="text-3xl font-bold mb-6 border-b border-green-700 pb-2">Sobre mí</h1>
 
       <!-- Índice tipo terminal -->
-      <!-- Índice tipo terminal -->
 <div class="mb-10 text-green-300 font-mono text-sm leading-relaxed space-y-2">
   <div><span class="text-green-500">beafn28@web</span>$ <a href="#sobre-mi" class="text-white hover:text-green-400">cd sobremi</a></div>
   <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#ciberseguridad" class="text-white hover:text-green-400">cat ciberseguridad</a></div>
   <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#tech-stack" class="text-white hover:text-green-400">cat tech-stack</a></div>
+  <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#experiencia" class="text-white hover:text-green-400">cat experiencia</a></div>
   <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#certificaciones" class="text-white hover:text-green-400">cat certificaciones</a></div>
   <div><span class="text-green-500">beafn28@web</span>:<span class="text-blue-400">~/sobremi</span>$ <a href="#cursos" class="text-white hover:text-green-400">cat cursos</a></div>
 </div>
@@ -62,6 +62,34 @@
       </div>
 
 
+<!-- EXPERIENCIA -->
+<div id="experiencia">
+  <h2 class="text-2xl font-semibold text-green-300 mb-6 mt-12">Experiencia</h2>
+  <ul class="list-disc pl-6 text-white space-y-6 text-base">
+    <li>
+      <strong class="text-green-400">Becaria de pentesting</strong> — Advens (abr. 2025 – actualidad)<br />
+      <ul class="list-disc pl-5 text-sm text-gray-300 mt-1 space-y-1">
+        <li>Apoyo al equipo en el reconocimiento y recolección de información.</li>
+        <li>Apoyo en pruebas de penetración.</li>
+        <li>Análisis de resultados y documentación, ayuda en la redacción de reportes técnicos.</li>
+        <li>Apoyo en mejorar la documentación del área.</li>
+        <li>Aprendizaje continuo de ejercicios de pentesting.</li>
+      </ul>
+    </li>
+    <li>
+      <strong class="text-green-400">Colaboradora</strong> — The Hacker Labs (sept. 2024 – actualidad)<br />
+      <p class="text-sm text-gray-300 mt-1">
+        Creación de writeups, desarrollo de máquinas virtuales para CTF y contenido educativo para la comunidad de hacking ético. Contribución a la formación de profesionales en ciberseguridad mediante recursos prácticos que fomentan el aprendizaje en detección y explotación de vulnerabilidades.
+      </p>
+    </li>
+    <li>
+      <strong class="text-green-400">Estudiante en prácticas</strong> — AIR Institute (jul. 2024 – sept. 2024)<br />
+      <p class="text-sm text-gray-300 mt-1">
+        Participación en un proyecto de desarrollo de un sistema SIEM con capacidades de Inteligencia Artificial para detección y gestión de incidentes de seguridad.
+      </p>
+    </li>
+  </ul>
+</div>
 <!-- CERTIFICACIONES -->
 <div id="certificaciones">
   <h2 class="text-2xl font-semibold text-green-300 mb-4 mt-12">Certificaciones</h2>
@@ -99,7 +127,7 @@
   </div>
 </div>
 
-<!-- CURSOS - TIMELINE -->
+
 <!-- CURSOS -->
 <div id="cursos" class="mt-16">
   <h2 class="text-2xl font-semibold text-green-300 mb-4">Cursos</h2>
