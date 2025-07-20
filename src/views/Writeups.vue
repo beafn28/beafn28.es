@@ -69,6 +69,8 @@ import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
 const writeups = ref([
+            { title: 'Controler', platform: 'Vulnyx', os: 'Windows', difficulty: 'Media', link: 'https://beafn28.gitbook.io/beafn28/writeups/vulnyx/controler' },
+            { title: 'Change', platform: 'Vulnyx', os: 'Windows', difficulty: 'Media', link: 'https://beafn28.gitbook.io/beafn28/writeups/vulnyx/change' },
 	  { title: 'Laboratorios PortSwigger', platform: 'PortSwigger', os: 'Windows/Linux', difficulty: 'Todo', link: 'https://beafn28.gitbook.io/beafn28/web-security/laboratorios-portswigger' },
   { title: 'Brooklyn Nine Nine', platform: 'TryHackMe', os: 'Linux', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/writeups/tryhackme/brooklyn-nine-nine' },
   { title: 'Pickle Rick', platform: 'TryHackMe', os: 'Linux', difficulty: 'Fácil', link: 'https://beafn28.gitbook.io/beafn28/writeups/tryhackme/pickle-rick' },
