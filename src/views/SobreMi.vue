@@ -67,7 +67,7 @@
   <h2 class="text-2xl font-semibold text-green-300 mb-6 mt-12">Experiencia</h2>
   <ul class="list-disc pl-6 text-white space-y-6 text-base">
     <li>
-      <strong class="text-green-400">Becaria de pentesting</strong> — Advens (abr. 2025 – actualidad)<br />
+      <strong class="text-green-400">Trainee en Pentesting</strong> — Advens (abr. 2025 – actualidad)<br />
       <ul class="list-disc pl-5 text-sm text-gray-300 mt-1 space-y-1">
         <li>Apoyo al equipo en el reconocimiento y recolección de información.</li>
         <li>Apoyo en pruebas de penetración.</li>
@@ -79,13 +79,14 @@
     <li>
       <strong class="text-green-400">Colaboradora</strong> — The Hacker Labs (sept. 2024 – actualidad)<br />
       <p class="text-sm text-gray-300 mt-1">
-        Creación de writeups, desarrollo de máquinas virtuales para CTF y contenido educativo para la comunidad de hacking ético. Contribución a la formación de profesionales en ciberseguridad mediante recursos prácticos que fomentan el aprendizaje en detección y explotación de vulnerabilidades.
+        Enfocada en la creación de writeups, desarrollo de máquinas virtuales para CTF, y generación de contenido educativo para la comunidad de hacking ético. Contribuyo a la formación de profesionales en ciberseguridad mediante la creación de recursos prácticos y desafiantes que fomentan el aprendizaje continuo en la detección y explotación de vulnerabilidades.
       </p>
     </li>
     <li>
-      <strong class="text-green-400">Estudiante en prácticas</strong> — AIR Institute (jul. 2024 – sept. 2024)<br />
+      <strong class="text-green-400">Intern en Ciberseguridad</strong> — AIR Institute (jul. 2024 – sept. 2024)<br />
       <p class="text-sm text-gray-300 mt-1">
-        Participación en un proyecto de desarrollo de un sistema SIEM con capacidades de Inteligencia Artificial para detección y gestión de incidentes de seguridad.
+        Participación en el desarrollo de un Sistema de Gestión de Información y Eventos de Seguridad (SIEM) con integración de capacidades de Inteligencia Artificial, orientado a la detección proactiva de amenazas.
+Colaboración en tareas de diseño, programación y despliegue del sistema, aplicando técnicas de machine learning para la correlación y análisis inteligente de eventos de seguridad.
       </p>
     </li>
   </ul>
