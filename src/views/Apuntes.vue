@@ -1050,6 +1050,24 @@ const notes = [
   category: 'Active Directory',
   link: 'https://beafn28.gitbook.io/beafn28/apuntes-hacking/introduction-active-directory',
   description: 'Conceptos básicos, arquitectura y componentes esenciales para entender Active Directory en un entorno de red.'
+},
+{
+  title: 'Conceptos AD - Parte 1',
+  category: 'Active Directory',
+  link: 'https://beafn28.gitbook.io/beafn28/notas/active-directory-parte-1',
+  description: 'Fundamentos clave de Active Directory, estructura, tipos de usuarios y fases técnicas de un pentester en entornos AD.'
+},
+{
+  title: 'Conceptos AD - Parte 2',
+  category: 'Active Directory',
+  link: 'https://beafn28.gitbook.io/beafn28/notas/active-directory-parte-2',
+  description: 'Notas rápidas de reconocimiento y técnicas como Kerberoasting, Mimikatz, Golden Ticket y más.'
+},
+{
+  title: 'Web Requests',
+  category: 'WebSecurity',
+  link: 'https://beafn28.gitbook.io/beafn28/preparar-cbbh/web-requests',
+  description: 'Fundamentos del protocolo HTTP, métodos de petición, estado de respuestas, uso de cURL y análisis de cabeceras para comprender cómo funcionan las solicitudes web.'
 }
 ]
 
