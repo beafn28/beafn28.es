@@ -21,6 +21,9 @@
         <p class="mb-6 text-lg leading-relaxed">
   Actualmente me encuentro en un proceso continuo de formación, ampliando mis conocimientos y habilidades mediante la obtención de certificaciones cada vez más avanzadas en ciberseguridad. Puedes consultar el progreso y el roadmap completo en el apartado <strong class="text-white">Certificaciones</strong>.
 </p>
+<p class="mb-6 text-lg leading-relaxed">
+  Recientemente he publicado mi <strong class="text-white">primer CVE</strong> identificado de forma responsable: una vulnerabilidad en el sistema de login de Soosyze CMS <strong class="text-white">[CVE-2025-52392]</strong>, incluida en la base de datos oficial del <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52392" class="text-blue-400 hover:text-green-400">NVD</a>.
+</p>
       </div>
 
       <!-- CIBERSEGURIDAD -->

@@ -321,6 +321,34 @@
     </div>
   </div>
 </template>
+<!-- CVE-2025-52392 -->
+<template v-else-if="project.title === 'CVE-2025-52392'">
+  <div class="flex flex-col h-full justify-between">
+    <div>
+      <h3 class="text-xl font-bold text-green-300 mb-2">CVE-2025-52392</h3>
+      <div class="flex flex-wrap gap-2 mb-3">
+        <span v-for="tag in project.tags" :key="tag" class="px-2 py-0.5 bg-green-700/20 text-green-400 border border-green-400 text-xs rounded-full">
+          {{ tag }}
+        </span>
+      </div>
+      <p class="text-sm text-white mb-4">
+        Este es mi <span class="text-green-400 font-bold">primer CVE descubierto</span>, reportado de forma responsable como parte de mis investigaciones independientes.
+        La vulnerabilidad afecta al sistema de autenticación del CMS <span class="text-green-400">Soosyze 2.0</span>, permitiendo ataques de fuerza bruta sin restricciones.
+        Fue aceptado y publicado en la base de datos oficial del NVD.
+      </p>
+    </div>
+    <div class="flex gap-3 flex-wrap mt-auto pt-4">
+      <a :href="project.link" target="_blank"
+        class="text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+        Ver en NVD
+      </a>
+      <a :href="project.extraLink" target="_blank"
+        class="text-sm text-black bg-green-400 hover:bg-green-500 px-4 py-1 rounded transition font-bold">
+        Ver análisis
+      </a>
+    </div>
+  </div>
+</template>
           <!-- Otros proyectos -->
           <template v-else>
             <div class="flex flex-col h-full justify-between">
@@ -368,7 +396,7 @@ function scrollToTop() {
 const route = useRoute()
 
 const activeCategory = ref('Todos')
-const categories = ['Todos', 'CTF', 'Herramienta', 'Apuntes', 'Cuántica']
+const categories = ['Todos', 'CTF', 'Herramienta', 'Apuntes', 'Cuántica', 'CVE']
 
 // Reacciona al tag en la URL (por ejemplo: /proyectos?tag=CTF)
 watch(
@@ -405,6 +433,13 @@ const projects = [
   { title: 'VulnSpy', link: 'https://github.com/beafn28/VulnSpy', tags: ['Herramienta'], description: 'Script para analizar vulnerabilidades comunes en servicios expuestos.' },
   { title: 'Computacion Cuantica', link: 'https://github.com/beafn28/Computacion-Cuantica', tags: ['Cuántica'], description: 'Ejercicios, recursos y experimentos relacionados con la computación cuántica.' },
   { title: 'CripTool', link: 'https://github.com/beafn28/CripTool', tags: ['Herramienta'], description: 'Herramienta básica para cifrado y descifrado con algoritmos clásicos.' },
+  {
+  title: 'CVE-2025-52392',
+  tags: ['CVE'],
+  description: 'Mi primer CVE publicado: vulnerabilidad de fuerza bruta descubierta en el CMS Soosyze 2.0, reportada responsablemente y registrada en el NVD.',
+  link: 'https://nvd.nist.gov/vuln/detail/CVE-2025-52392',
+  extraLink: 'https://beafn28.gitbook.io/beafn28/cve/brute-force-login-vulnerability-in-soosyze-cms-2.0-cve-2025-52392'
+}
 ]
 
 const filteredProjects = computed(() => {
