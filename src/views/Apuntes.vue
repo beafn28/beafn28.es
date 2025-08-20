@@ -1068,6 +1068,36 @@ const notes = [
   category: 'WebSecurity',
   link: 'https://beafn28.gitbook.io/beafn28/preparar-cbbh/web-requests',
   description: 'Fundamentos del protocolo HTTP, métodos de petición, estado de respuestas, uso de cURL y análisis de cabeceras para comprender cómo funcionan las solicitudes web.'
+},
+{
+  title: 'Introducción a Aplicaciones Web',
+  category: 'WebSecurity',
+  link: 'https://beafn28.gitbook.io/beafn28/preparar-cbbh/introduction-to-web-applications',
+  description: 'Introducción a aplicaciones web revisando frontend, backend, servidores, bases de datos, vulnerabilidades comunes, códigos HTTP, cURL y CVEs con métricas CVSS.'
+},
+{
+  title: 'Usando Proxies Web',
+  category: 'WebSecurity',
+  link: 'https://beafn28.gitbook.io/beafn28/preparar-cbbh/using-web-proxies',
+  description: 'Uso de proxies web (Burp, ZAP, Proxychains) para interceptar, repetir, modificar y fuzzear solicitudes HTTP, identificar vulnerabilidades y extraer flags en aplicaciones web.'
+},
+{
+  title: 'Recolección de Información - Edición Web',
+  category: 'WebSecurity',
+  link: 'https://beafn28.gitbook.io/beafn28/preparar-cbbh/introduction-gathering-web-edition',
+  description: 'Técnicas de reconocimiento web utilizando WHOIS, DNS, subdominios, transferencias de zona, vhosts, fingerprinting, crawling y archivos históricos para identificar tecnologías, infraestructura y datos expuestos.'
+},
+{
+  title: 'Atacando Aplicaciones Web con FFUF',
+  category: 'WebSecurity',
+  link: 'https://beafn28.gitbook.io/beafn28/preparar-cbbh/attacking-web-applications-with-ffuz',
+  description: 'Uso avanzado de ffuf para fuzzing de directorios, páginas, extensiones, subdominios, vhosts, parámetros y valores, permitiendo descubrir rutas ocultas, flags y vulnerabilidades en aplicaciones web.'
+},
+{
+  title: 'Desofuscación de JavaScript',
+  category: 'WebSecurity',
+  link: 'https://beafn28.gitbook.io/beafn28/preparar-cbbh/javascript-deobfuscation',
+  description: 'Técnicas para identificar, analizar y desofuscar código JavaScript mediante herramientas de beautify, unpackers y métodos de decodificación (Base64, Hex, Rot13).'
 }
 ]
 
