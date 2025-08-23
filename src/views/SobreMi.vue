@@ -197,17 +197,17 @@ const certifications = [
   {
     title: 'eCPPT — Certified Professional Penetration Tester',
     issuer: 'INE Security',
-    date: 'En curso'
+    date: 'Agosto 2025'
   },
   {
     title: 'eWPTX — Web Application Penetration Tester eXtreme',
     issuer: 'INE Security',
-    date: 'Jul 2025'
+    date: 'Julio 2025'
   },
   {
     title: 'eJPT — Junior Penetration Tester',
     issuer: 'INE Security',
-    date: 'Feb 2025'
+    date: 'Febrero 2025'
   }
 ]
 
